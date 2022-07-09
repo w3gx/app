@@ -39,7 +39,7 @@ export const PageNavbar = (props) => {
                         <NextLink href="/" shallow>
                             <Button
                                 component="a"
-                                sx={{ mx: 3, fontWeight: "bold" }}
+                                sx={{ mr: 3, fontWeight: "bold" }}
                                 variant="text"
                             >
                                 <Selector fontSize="small" />
@@ -51,36 +51,55 @@ export const PageNavbar = (props) => {
                     </Tooltip>
                     <Tooltip title="Registry">
                         <NextLink href="/registry" shallow>
-                            <Button component="a" sx={{ mx: 1 }} variant="text">
+                            <Button
+                                component="a"
+                                sx={{
+                                    mx: 1,
+                                    display: {
+                                        xs: "none",
+                                        lg: "inline-flex",
+                                    },
+                                }}
+                                variant="text"
+                            >
                                 Registry
                             </Button>
                         </NextLink>
                     </Tooltip>
                     <Tooltip title="Documentation">
                         <NextLink href="/docs" shallow>
-                            <Button component="a" sx={{ mx: 1 }} variant="text">
+                            <Button
+                                component="a"
+                                sx={{
+                                    mx: 1,
+                                    display: {
+                                        xs: "none",
+                                        lg: "inline-flex",
+                                    },
+                                }}
+                                variant="text"
+                            >
                                 Docs
                             </Button>
                         </NextLink>
                     </Tooltip>
                     <Tooltip title="Pricing">
                         <NextLink href="/pricing" shallow>
-                            <Button component="a" sx={{ mx: 1 }} variant="text">
+                            <Button
+                                component="a"
+                                sx={{
+                                    mx: 1,
+                                    display: {
+                                        xs: "none",
+                                        lg: "inline-flex",
+                                    },
+                                }}
+                                variant="text"
+                            >
                                 Pricing
                             </Button>
                         </NextLink>
                     </Tooltip>
-                    <IconButton
-                        onClick={onSidebarOpen}
-                        sx={{
-                            display: {
-                                xs: "inline-flex",
-                                lg: "none",
-                            },
-                        }}
-                    >
-                        <Menu fontSize="small" />
-                    </IconButton>
                     <Box sx={{ flexGrow: 1 }} />
                     <Tooltip title="Github">
                         <IconButton
@@ -101,11 +120,28 @@ export const PageNavbar = (props) => {
                             {theme === "light" ? <DarkMode /> : <LightMode />}
                         </IconButton>
                     </Tooltip>
+                    <IconButton
+                        onClick={onSidebarOpen}
+                        sx={{
+                            display: {
+                                xs: "inline-flex",
+                                lg: "none",
+                            },
+                        }}
+                    >
+                        <Menu fontSize="small" />
+                    </IconButton>
                     <Tooltip title="Dashboard">
                         <NextLink href="/sign-in" shallow>
                             <Button
                                 component="a"
-                                sx={{ ml: 3 }}
+                                sx={{
+                                    ml: 3,
+                                    display: {
+                                        xs: "none",
+                                        lg: "inline-flex",
+                                    },
+                                }}
                                 variant="outlined"
                             >
                                 Sign In
@@ -116,7 +152,13 @@ export const PageNavbar = (props) => {
                         <NextLink href="/sign-up" shallow>
                             <Button
                                 component="a"
-                                sx={{ ml: 3 }}
+                                sx={{
+                                    ml: 3,
+                                    display: {
+                                        xs: "none",
+                                        lg: "inline-flex",
+                                    },
+                                }}
                                 variant="contained"
                             >
                                 Start Buidling
