@@ -166,7 +166,7 @@ const options = {
             fontWeight: 600,
         },
         fontFamily:
-            '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"',
+            '"Karla", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"',
         body1: {
             fontSize: "1rem",
             fontWeight: 400,
