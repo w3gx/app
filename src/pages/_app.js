@@ -37,7 +37,7 @@ const W3GApp = (props) => {
                 />
             </Head>
             <LocalizationProvider dateAdapter={AdapterDateFns}>
-                <W3GThemeProvider variant="light">
+                <W3GThemeProvider>
                     <CssBaseline />
                     <Layout>
                         <Component {...pageProps} />
