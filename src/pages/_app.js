@@ -18,10 +18,7 @@ const W3GApp = (props) => {
         pageProps,
     } = props;
 
-    const config = Component.config || {
-        title: "Home",
-        isDashboard: false,
-    };
+    const config = Component.config || {};
 
     const Layout = config.isDashboard ? DashboardLayout : PageLayout;
 
