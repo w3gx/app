@@ -6,10 +6,10 @@ const useStore = (key, initialValue) => {
     const [state, setState] = useState(storedValue);
 
     useEffect(() => {
-        if (storedValue !== state) {
-            setState(storedValue);
+        if (store(key) !== state) {
+            store(key, state);
         }
-    });
+    }, [state]);
 
     return [state, setState];
 };
