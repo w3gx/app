@@ -14,8 +14,8 @@ const ThemeContext = createContext({
 export const useTheme = () => useContext(ThemeContext);
 
 export const W3GThemeProvider = ({ children }) => {
-    const [theme, setTheme] = useStore("w3g-theme");
-    const options = theme === "light" ? lightTheme : darkTheme;
+    const [theme, setTheme] = useStore("w3g-theme", "light");
+    const options = theme === "dark" ? darkTheme : lightTheme;
     const toggleTheme = () => setTheme(theme === "light" ? "dark" : "light");
 
     return (
