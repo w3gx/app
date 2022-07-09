@@ -13,8 +13,8 @@ import {
     Typography,
 } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import { Facebook as FacebookIcon } from "../icons/facebook";
-import { Google as GoogleIcon } from "../icons/google";
+import { Facebook as FacebookIcon } from "../../icons/facebook";
+import { Google as GoogleIcon } from "../../icons/google";
 
 const Login = () => {
     const router = useRouter();
