@@ -1,13 +1,13 @@
 import Head from "next/head";
 import { CacheProvider } from "@emotion/react";
 import { CssBaseline } from "@mui/material";
-import LocalizationProvider from "@mui/lab/LocalizationProvider";
+import { LocalizationProvider } from "@mui/x-date-pickers";
 import AdapterDateFns from "@mui/lab/AdapterDateFns";
 
 import { W3GThemeProvider } from "src/theme";
 import { PageLayout } from "src/components/page-layout";
 import { DashboardLayout } from "src/components/dashboard-layout";
-import { createEmotionCache } from "src/utils/create-emotion-cache";
+import { createEmotionCache } from "src/utils/emotion-cache";
 
 const clientSideEmotionCache = createEmotionCache();
 
