@@ -1,11 +1,10 @@
 import Head from "next/head";
-import { ThemeProvider } from "@mui/material/styles";
 import { CacheProvider } from "@emotion/react";
 import { CssBaseline } from "@mui/material";
 import LocalizationProvider from "@mui/lab/LocalizationProvider";
 import AdapterDateFns from "@mui/lab/AdapterDateFns";
 
-import { theme } from "src/theme";
+import { W3GThemeProvider } from "src/theme";
 import { PageLayout } from "src/components/page-layout";
 import { DashboardLayout } from "src/components/dashboard-layout";
 import { createEmotionCache } from "src/utils/create-emotion-cache";
@@ -36,12 +35,12 @@ const W3GApp = (props) => {
                 />
             </Head>
             <LocalizationProvider dateAdapter={AdapterDateFns}>
-                <ThemeProvider theme={theme}>
+                <W3GThemeProvider variant="light">
                     <CssBaseline />
                     <Layout>
                         <Component {...pageProps} />
                     </Layout>
-                </ThemeProvider>
+                </W3GThemeProvider>
             </LocalizationProvider>
         </CacheProvider>
     );
