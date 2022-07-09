@@ -28,7 +28,9 @@ const W3GApp = (props) => {
     return (
         <CacheProvider value={emotionCache}>
             <Head>
-                <title> {config.title} | W3G </title>
+                <title>
+                    {config.title ? `${config.title} | W3G` : "Web3 Gateway"}
+                </title>
                 <meta
                     name="viewport"
                     content="initial-scale=1, width=device-width"
