@@ -3,7 +3,6 @@ import NextLink from "next/link";
 import styled from "@emotion/styled";
 import {
     AppBar,
-    Avatar,
     Button,
     Box,
     IconButton,
@@ -11,13 +10,10 @@ import {
     Typography,
     Tooltip,
 } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
-import SearchIcon from "@mui/icons-material/Search";
-import { Bell as BellIcon } from "../icons/bell";
-import { UserCircle as UserCircleIcon } from "../icons/user-circle";
-import { Users as UsersIcon } from "../icons/users";
-import { Download } from "../icons/download";
-import { Selector } from "../icons/selector";
+import { GitHub, DarkMode, LightMode, Menu } from "@mui/icons-material";
+
+import { useTheme } from "src/theme";
+import { Selector } from "src/icons/selector";
 
 const PageNavbarRoot = styled(AppBar)(({ theme }) => ({
     backgroundColor: theme.palette.background.paper,
@@ -26,6 +22,7 @@ const PageNavbarRoot = styled(AppBar)(({ theme }) => ({
 
 export const PageNavbar = (props) => {
     const { onSidebarOpen, ...other } = props;
+    const { setTheme, theme } = useTheme();
 
     return (
         <>
@@ -82,20 +79,23 @@ export const PageNavbar = (props) => {
                             },
                         }}
                     >
-                        <MenuIcon fontSize="small" />
+                        <Menu fontSize="small" />
                     </IconButton>
                     <Box sx={{ flexGrow: 1 }} />
                     <Tooltip title="Github">
-                        <>
-                            <Button
-                                component="a"
-                                sx={{ mx: 1 }}
-                                href="https://github.com/w3gx"
-                                variant="text"
-                            >
-                                Our Github ✨
-                            </Button>
-                        </>
+                        <IconButton
+                            component="a"
+                            sx={{ mx: 1 }}
+                            href="https://github.com/w3gx"
+                            variant="text"
+                        >
+                            <GitHub />
+                        </IconButton>
+                    </Tooltip>
+                    <Tooltip title="Github">
+                        <IconButton sx={{ mx: 1 }} variant="text">
+                            {theme === "light" ? <DarkMode /> : <LightMode />}
+                        </IconButton>
                     </Tooltip>
                     <Tooltip title="Dashboard">
                         <NextLink href="/sign-in" shallow>
