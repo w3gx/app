@@ -22,7 +22,7 @@ const PageNavbarRoot = styled(AppBar)(({ theme }) => ({
 
 export const PageNavbar = (props) => {
     const { onSidebarOpen, ...other } = props;
-    const { setTheme, theme } = useTheme();
+    const { toggleTheme, theme } = useTheme();
 
     return (
         <>
@@ -93,7 +93,11 @@ export const PageNavbar = (props) => {
                         </IconButton>
                     </Tooltip>
                     <Tooltip title="Github">
-                        <IconButton sx={{ mx: 1 }} variant="text">
+                        <IconButton
+                            sx={{ mx: 1 }}
+                            variant="text"
+                            onClick={toggleTheme}
+                        >
                             {theme === "light" ? <DarkMode /> : <LightMode />}
                         </IconButton>
                     </Tooltip>
