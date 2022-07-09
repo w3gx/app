@@ -15,14 +15,14 @@ import { GitHub, DarkMode, LightMode, Menu } from "@mui/icons-material";
 import { useTheme } from "src/theme";
 import { Selector } from "src/icons/selector";
 
-const PageNavbarRoot = styled(AppBar)(({ theme }) => ({
-    backgroundColor: theme.palette.background.paper,
-    boxShadow: theme.shadows[3],
-}));
-
 export const PageNavbar = (props) => {
     const { onSidebarOpen, ...other } = props;
     const { toggleTheme, theme } = useTheme();
+
+    const PageNavbarRoot = styled(AppBar)(({ theme }) => ({
+        backgroundColor: theme.palette.background.paper,
+        boxShadow: theme.shadows[3],
+    }));
 
     return (
         <>
@@ -92,7 +92,7 @@ export const PageNavbar = (props) => {
                             <GitHub />
                         </IconButton>
                     </Tooltip>
-                    <Tooltip title="Github">
+                    <Tooltip title="Toggle Theme">
                         <IconButton
                             sx={{ mx: 1 }}
                             variant="text"
