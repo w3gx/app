@@ -5,9 +5,6 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 const NotFound = () => (
     <>
-        <Head>
-            <title>404 | W3G</title>
-        </Head>
         <Box
             component="main"
             sx={{
@@ -53,5 +50,9 @@ const NotFound = () => (
         </Box>
     </>
 );
+
+NotFound.config = {
+    title: "404 - Not Found",
+};
 
 export default NotFound;
