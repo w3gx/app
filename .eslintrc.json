@@ -5,10 +5,31 @@
         "jsx-a11y/alt-text": "off",
         "react/display-name": "off",
         "react/jsx-max-props-per-line": [
-            3,
+            2,
             {
-                "maximum": 3
+                "maximum": 2,
+                "when": "always",
+                "allowEmptyLines": false
             }
-        ]
+        ],
+        "react/jsx-no-bind": [
+            "error",
+            {
+                "allowArrowFunctions": true,
+                "allowBind": false,
+                "ignoreRefs": true,
+                "allowFunctions": false,
+                "allowStringConcat": false
+            }
+        ],
+        "react/jsx-no-comment-textnodes": "off",
+        "react/jsx-no-duplicate-props": [
+            "error",
+            {
+                "ignoreCase": true
+            }
+        ],
+        "react/jsx-no-literals": "off",
+        "react/jsx-no-undef": "off"
     }
 }
