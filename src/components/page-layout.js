@@ -3,7 +3,7 @@ import { Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { PageNavbar } from "./page-navbar";
 
-const PageLayoutRoot = styled("div")(({ theme }) => ({
+const PageLayoutRoot = styled("div")(() => ({
     display: "flex",
     flex: "1 1 auto",
     maxWidth: "100%",
